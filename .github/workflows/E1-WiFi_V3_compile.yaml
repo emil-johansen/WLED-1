@@ -47,7 +47,7 @@ jobs:
         cd $GITHUB_WORKSPACE
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-        git add $GITHUB_WORKSPACE/WLED_0.15.0-b4_E1-WiFi_V3.bin
+        git add $GITHUB_WORKSPACE/custom_build.bin
         git add $GITHUB_WORKSPACE/last_update_date.txt
-        git commit -m "Commit WLED_0.15.0-b4_E1-WiFi_V3.bin"
+        git commit -m "Commit Custom Build"
         git push origin main
