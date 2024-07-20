@@ -1,4 +1,4 @@
-name: WLED_0.15.0-b4_E1-WiFi_V3_compile_ESP32-C3
+name: WLED_0.15.0-b4_AR_E1-WiFi_V3_compile_ESP32-C3
 
 on:
     workflow_dispatch:
@@ -31,7 +31,10 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32c3dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_AP_SSID_UNIQUE -D LEDPIN=2 -D RLYPIN=5 -D DEFAULT_LED_COUNT=100 -D ABL_MILLIAMPS_DEFAULT=6000 -D WLED_AP_SSID="\"E1-WiFi_V3"\" -D WLED_AP_PASS="\"wled1234"\" -D SERVERNAME="\"E1-WiFi V3\""' >>platformio.ini
+        echo 'build_flags = ${env:esp32c3dev.build_flags} -D WLED_AP_SSID_UNIQUE -D LEDPIN=2 -D RLYPIN=5 -D DEFAULT_LED_COUNT=100 -D ABL_MILLIAMPS_DEFAULT=6000 -D WLED_AP_SSID="\"E1-WiFi_V3"\" -D WLED_AP_PASS="\"wled1234"\" -D SERVERNAME="\"E1-WiFi V3\""  ${esp32.AR_build_flags}' >>platformio.ini
+        echo 'lib_deps = ' >>platformio.ini
+        echo '  ${env:esp32c3dev.lib_deps}' >>platformio.ini
+        echo '  ${esp32.AR_lib_deps}' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
         pio run -e custom_build || pio run -e custom_build
