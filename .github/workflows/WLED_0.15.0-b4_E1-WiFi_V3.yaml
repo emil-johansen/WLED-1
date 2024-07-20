@@ -1,4 +1,4 @@
-name: WLED_0.15.0-b4_E1-WiFi_V3_compile
+name: WLED_0.15.0-b4_E1-WiFi_V3_compile_ESP32-C3
 
 on:
     workflow_dispatch:
