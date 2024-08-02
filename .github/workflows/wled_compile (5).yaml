@@ -34,7 +34,7 @@ jobs:
         echo 'build_flags = ${env:esp32dev.build_flags} -D USERMOD_MULTI_RELAY -D USERMOD_ADS1115' >>platformio.ini
         echo 'lib_deps = ' >>platformio.ini
         echo '  ${env:esp32dev.lib_deps}' >>platformio.ini
-        echo '  adafruit/Adafruit BusIO @ 1.13.2' >>platformio.ini
+        echo '  adafruit/Adafruit BusIO @ 1.16.1' >>platformio.ini
         echo '  adafruit/Adafruit ADS1X15 @ 2.4.0' >>platformio.ini
         echo '  adafruit/Adafruit Unified Sensor' >>platformio.ini
         
