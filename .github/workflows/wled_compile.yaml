@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev.build_flags} -D SERVERNAME="\"E2-WiFi V3\"" -D WLED_AP_SSID='\''"E2-WiFi V3"'\'' -D WLED_AP_PASS='\''"wled1234"'\'' -D ESP32_MULTISTRIP -D NUM_STRIPS=2 -D PIXEL_COUNTS="100, 100" -D DATA_PINS="18, 19" -D ABL_MILLIAMPS_DEFAULT=10000 -D MULTI_RELAY_MAX_RELAYS=2 -D MULTI_RELAY_PINS 5,16 -D MULTI_RELAY_DELAYS 0,0 -D WLED_AP_SSID_UNIQUE -D USERMOD_MULTI_RELAY -D ABL_MILLIAMPS_DEFAULT=12000' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev.build_flags} -D SERVERNAME="\"E2-WiFi V3\"" -D WLED_AP_SSID='"E2-WiFi V3"' -D WLED_AP_PASS='"wled1234"' -D ESP32_MULTISTRIP -D NUM_STRIPS=2 -D PIXEL_COUNTS="100, 100" -D DATA_PINS="18, 19" -D ABL_MILLIAMPS_DEFAULT=10000 -D MULTI_RELAY_MAX_RELAYS=2 -D USERMOD_MULTI_RELAY -D MULTI_RELAY_PINS=5,16 -D ABL_MILLIAMPS_DEFAULT=12000' >>platformio.ini
         echo '' >>platformio.ini
         
         echo 'build_unflags= -D WLED_RELEASE_NAME' >>platformio.ini
