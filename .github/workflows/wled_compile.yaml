@@ -31,7 +31,7 @@ jobs:
         npm install
         echo '[env:custom_build]' >>platformio.ini
         echo 'extends = env:esp32dev_16M' >>platformio.ini
-        echo 'build_flags = ${env:esp32dev_16M.build_flags} -D WLED_AP_SSID_UNIQUE -D DATA_PINS=18 -D RLYPIN=5 -D ABL_MILLIAMPS_DEFAULT=12000 -D WLED_AP_PASS='"E2-WiFi V3"' ${esp32.AR_build_flags} -D USERMOD_MULTI_RELAY -D USERMOD_INTERNAL_TEMPERATURE' >>platformio.ini
+        echo 'build_flags = ${env:esp32dev_16M.build_flags} -D WLED_AP_SSID_UNIQUE -D DATA_PINS=18 -D RLYPIN=5 -D ABL_MILLIAMPS_DEFAULT=12000 -D WLED_AP_SSID='"E2-WiFi V3"' ${esp32.AR_build_flags} -D USERMOD_MULTI_RELAY -D USERMOD_INTERNAL_TEMPERATURE' >>platformio.ini
         echo 'lib_deps = ' >>platformio.ini
         echo '  ${env:esp32dev_16M.lib_deps}' >>platformio.ini
         echo '  ${esp32.AR_lib_deps}' >>platformio.ini
